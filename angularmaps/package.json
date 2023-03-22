@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@agm/core": "^1.1.0"
+  }
+}

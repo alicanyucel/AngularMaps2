@@ -1,0 +1,8 @@
+<div class="content">
+    <h2>Google Maps Ali Can Yücel</h2>
+    <agm-map [latitude]="mapsModel[0].latitude" [longitude]="mapsModel[0].longitude" [zoom]="zoom" [mapDraggable]="true" (mapClick)="mapclick($event)"  [disableDoubleClickZoom]="true">
+        <agm-marker *ngFor="let mapsModel of mapsModel"
+        [latitude]="mapsModel.latitude" [longitude]="mapsModel.longitude" [markerDraggable]="false"  (markerClick)="markerClick($event)"
+        ></agm-marker>
+    </agm-map>
+</div>
