@@ -9,11 +9,20 @@ import { CarrierService } from 'src/service/carrierservice.service';
 export class AppComponent implements OnInit {
   title = 'angularmaps Ali Can Yücel';
   zoom: number = 14; // yakınlaştırır
+  // motokurye ikonu ekleme
+  icon={
+    url:'https://www.pngwing.com/tr/free-png-sozae',
+    scaledSize:{width:50,height:60}
+  }
   constructor(
     private _carrierService:CarrierService
   ){}
   ngOnInit(): void {
-    this.getList()
+  //  this.getList()
+     // 10 saniye arayla verileri getir
+    setInterval(() => {
+      this.getList(); 
+      }, 10000);
   }
   mapsModel:MapsModel[]=[]
 
